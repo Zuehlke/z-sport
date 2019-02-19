@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened style="overflow: hidden">
+    <h6>Date</h6>
+    <app-calendar-widget (dateChanged)="onDateChanged($event)"></app-calendar-widget>
+    <form>
+      <h6>Filter</h6>
+    <mat-form-field>
+      <mat-select placeholder="Sports" multiple (selectionChange)="showSelectedEventsBySports($event.value)">
+        <mat-option *ngFor="let sport of sportList" [value]="sport">{{sport.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    </form>
+  </mat-sidenav>
+  <mat-sidenav-content style="overflow: hidden">
+    <pm-events [events]="events"></pm-events>
+  </mat-sidenav-content>
+</mat-sidenav-container>

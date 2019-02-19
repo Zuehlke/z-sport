@@ -1,0 +1,9 @@
+<mat-toolbar class="mat-elevation-z6" [style.backgroundColor]="backgroundColor">
+  <a mat-button routerLink="calendar/1" *ngIf="isLoggedIn$">My Events</a> <!-- TODO: add user id to path -->
+  <a mat-button routerLink="calendar" *ngIf="isLoggedIn$">All Events</a>
+  <a mat-button routerLink="sports"  *ngIf="isLoggedIn$">Sports</a>
+  <a mat-button routerLink="createEvent" *ngIf="isLoggedIn$">Create Event</a>
+  <span class="spacer"></span>
+  <img src="assets/img_avatar.png" routerLink="login">
+</mat-toolbar>
+

@@ -1,0 +1,16 @@
+thead {
+  color: #337AB7;
+}
+
+.label {
+  font-weight: bold;
+  color: #337AB7;
+}
+
+.event-detail-view {
+  padding: 10px;
+}
+
+.list-group {
+  padding-bottom: 10px;
+}

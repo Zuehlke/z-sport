@@ -1,0 +1,30 @@
+thead {
+  color: #337AB7;
+}
+
+.CANCELLED {
+  color: white;
+  background: #ff3547;
+  border-radius: 50px/50px;
+  text-align: center;
+}
+
+.OK {
+  color: white;
+  background: #00c851;
+  border-radius: 50px/50px;
+  text-align: center;
+}
+
+.OPEN {
+  color: white;
+  background: #78909c;
+  border-radius: 50px/50px;
+  text-align: center;
+}
+
+.theadstatus {
+  text-align: center;
+}
+
+

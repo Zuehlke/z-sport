@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-header">
+    Current Events
+  </div>
+  <div class="card-body">
+    <app-event-table [events]="(getCurrentEvents())"></app-event-table>
+  </div>
+  <div class="card-header">
+    Past Events
+  </div>
+  <div class="card-body">
+    <app-event-table [events]="(getPastEvents())"></app-event-table>
+  </div>
+</div>

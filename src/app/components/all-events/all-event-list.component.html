@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header">
+    Event List
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table" *ngIf="events && events.length">
+        <thead>
+        <tr>
+          <th>Description</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Duration</th>
+          <th>Sport</th>
+          <th>Deadline</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let event of events">
+          <td>{{event.description}}</td>
+          <td>{{event.location}}</td>
+          <td>{{event.date | convertDate}}</td>
+          <td>{{event.date | convertTime}}</td>
+          <td>{{event.duration}} Hours</td>
+          <td>{{event.sport.name}}</td>
+          <td>{{event.deadLine | convertDateTime}}</td>
+          <td>
+            <app-subscription-button (onSubscribe)="subscribe($event)"
+                                     (onUnsubscribe)="unsubscribe($event)"
+                                     [event]="event" [user]="user">
+          </app-subscription-button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

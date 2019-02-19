@@ -1,0 +1,57 @@
+<div class="event-detail-view">
+
+  <h2>Event-Details</h2>
+  <div *ngIf="event" class="table-responsive">
+    <table class="table">
+      <tr>
+        <td class="label">Sport</td>
+        <td>{{event.sport.name}}</td>
+      </tr>
+      <tr>
+        <td class="label">Location</td>
+        <td>{{event.location}}</td>
+      </tr>
+      <tr>
+        <td class="label">Date & Time</td>
+        <td>{{event.date | convertDateTime}}</td>
+      </tr>
+      <tr>
+        <td class="label">Duration</td>
+        <td>{{event.duration}} Hours</td>
+      </tr>
+      <tr>
+        <td class="label">Deadline</td>
+        <td>{{event.deadLine |convertDateTime}}</td>
+      </tr>
+      <tr>
+        <td class="label">Description</td>
+        <td>{{event.description}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>Participants</h3>
+  <div *ngIf="event" class="table-responsive">
+    <table class="table">
+      <tr>
+        <td class="label">Minimal number</td>
+        <td>{{event.minParticipants}}</td>
+      </tr>
+      <tr>
+        <td class="label">Maximal number</td>
+        <td>{{getMaxParticipantsLabel(event.maxParticipants)}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <ul *ngIf="event" class="list-group">
+    <tr *ngFor="let user of event.participants">
+      <li class="list-group-item">{{user.email}}</li>
+    </tr>
+  </ul>
+  <app-subscription-button (onSubscribe)="handleSubscriptionUnsubscription($event)"
+                           (onUnsubscribe)="handleSubscriptionUnsubscription($event)"
+                           [event]="event" [user]="user">
+  </app-subscription-button>
+
+</div>

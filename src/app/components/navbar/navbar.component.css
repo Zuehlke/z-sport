@@ -1,0 +1,21 @@
+mat-toolbar {
+  background: #3f51b5;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+img {
+  border-radius: 50%;
+  max-height: 40pt;
+  max-width: 40pt;
+  min-width: 10pt;
+  min-height: 10pt;
+}
+

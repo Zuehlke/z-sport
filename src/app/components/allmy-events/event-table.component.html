@@ -1,0 +1,36 @@
+<div class="table-responsive">
+  <table class="table" *ngIf="events && events.length">
+    <thead>
+    <tr>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Duration</th>
+      <th>Sport</th>
+      <th>Deadline</th>
+      <th>Participants</th>
+      <th class="theadstatus">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let event of events">
+      <tr>
+        <td>
+          <a [routerLink]="['/event', event.id]">
+            {{event.description}}
+          </a>
+        </td>
+        <td>{{event.location}}</td>
+        <td>{{event.date | convertDate}}</td>
+        <td>{{event.date | convertTime}}</td>
+        <td>{{event.duration}} Hours</td>
+        <td>{{event.sport?.name}}</td>
+        <td>{{event.deadLine | convertDateTime}}</td>
+        <td>{{event.participants?.length}}</td>
+        <td class="{{event | showStatus}}">{{event | showStatus}}</td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</div>

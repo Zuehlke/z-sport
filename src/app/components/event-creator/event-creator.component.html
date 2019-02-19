@@ -1,0 +1,64 @@
+<form class="create-event-form" (ngSubmit)="onSubmit()" #eventForm="ngForm" [formGroup]="form">
+
+  <mat-form-field>
+    <mat-select placeholder="Sport" formControlName="sport" required>
+      <mat-option *ngFor="let sport of sports" [value]="sport">{{sport.name}}</mat-option>
+    </mat-select>
+    <mat-error>Please select a sport.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="location" placeholder="Location" formControlName="location" required>
+    <mat-error>Min 3 characters, max 20 characters... Please enter a valid location name. </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="eventDatepicker" placeholder="Choose a date"
+           name="startDate" [min]="getCurrentDate()" formControlName="date" required>
+    <mat-datepicker-toggle matSuffix [for]="eventDatepicker"></mat-datepicker-toggle>
+    <mat-datepicker #eventDatepicker></mat-datepicker>
+    <mat-error>Please pick a date for your event.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="time" name="startTime" placeholder="Time" formControlName="startTime" required>
+    <mat-error>Please enter valid start time. Example 20:15</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="duration" type="number" placeholder="Duration (hours)" formControlName="duration" required>
+    <mat-error>Please enter valid duration number in hours.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="deadlinePicker" placeholder="Deadline to register"
+           name="deadline" [min]="getCurrentDate()" [max]="getEventDate()" formControlName="deadline">
+    <mat-datepicker-toggle matSuffix [for]="deadlinePicker"></mat-datepicker-toggle>
+    <mat-datepicker #deadlinePicker></mat-datepicker>
+    <mat-error>Please pick a deadline for your event.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="time" name="deadlineTime" placeholder="Deadline Time" formControlName="deadlineTime">
+    <mat-error>Please enter valid start time. Example 20:15</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput name="minParticipants" type="number" placeholder="Minimal number of participants" formControlName="minParticipants">
+    <mat-error>Please enter a number greater than one.</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input matInput name="maxParticipants" type="number" placeholder="Maximal number of participants" formControlName="maxParticipants">
+    <mat-error>Please enter a number greater than one.</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput name="description" placeholder="Description" formControlName="description"></textarea>
+    <mat-error>Max 500 characters. Please enter a valid description for your event...</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" [disabled]="!form.valid" color="primary">Submit</button>
+</form>
+

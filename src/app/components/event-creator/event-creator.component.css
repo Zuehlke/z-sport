@@ -1,0 +1,14 @@
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20pt;
+}
+
+.create-event-form > * {
+  width: 80%;
+}
+
+.mat-form-field {
+  padding-bottom: 5px;
+}
