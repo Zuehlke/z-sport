@@ -40,7 +40,7 @@ import { SubscriptionButtonComponent } from './components/subscription-button/su
     NavbarComponent,
     CalendarComponent,
     CalendarWidgetComponent,
-    EventCreatorComponent,
+    // EventCreatorComponent,
     AllEventListComponent,
     MyEventListComponent,
     MyEventTableComponent,

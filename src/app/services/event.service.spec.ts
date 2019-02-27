@@ -17,7 +17,7 @@ describe('EventService', () => {
     });
 
 
-  it('should return all events with getAllEvents()', () => {
+ /* it('should return all events with getAllEvents()', () => {
     const expectedEvents: Event[] =
     [{id: 1, date: new Date('2018-08-10'), location: 'testlocation', description: 'Beschreibung', minParticipants: 1,
       maxParticipants: 5, deadLine: new Date('2018-08-15'), duration: 2, sport: <Sport>{id: 10, name: 'Skiing'},
@@ -41,5 +41,5 @@ describe('EventService', () => {
 
     expect(httpClientSpy.get.calls.count()).toBe(1, 'one call');
 
-  });
+  });*/
 });

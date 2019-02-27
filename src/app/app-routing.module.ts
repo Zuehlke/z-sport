@@ -20,10 +20,10 @@ const routes: Routes = [
     path: 'calendar',
     component: CalendarComponent
   },
-  {
+  /*{
     path: 'createEvent',
     component: EventCreatorComponent
-  },
+  },*/
   {
     path: 'sports',
     component: SportListComponent
