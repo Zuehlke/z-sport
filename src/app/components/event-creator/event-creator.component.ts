@@ -1,4 +1,4 @@
-/*import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Event} from '../../model/event';
 import {EventService} from '../../services/event.service';
 import {SportService} from '../../services/sport.service';
@@ -141,4 +141,4 @@ export class EventCreatorComponent implements OnInit {
     return this.form.get('date').value;
   }
 
-}*/
+}

@@ -7,9 +7,5 @@ cache:
   directories:
   - ~/.npm
   - ~/.cache
-dist: trusty
-sudo: required
-addons:
-  chrome: stable
-install:
-- npm install
+#install:
+#- npm install
