@@ -19,5 +19,6 @@ jobs:
       - npm run build
     deploy:
       provider: azure_web_apps
-      site: https://zvm-deploymnet-1-z-sport-frontend.azurewebsites.net/
+      site: zvm-deployment-1
       slot: z-sport-frontend
+      verbose: true
