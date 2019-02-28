@@ -3,7 +3,7 @@ notifications:
   email: false
 node_js:
   - 8.9.1
-script: ng test --watch=false
+script: ng test --no-watch
 cache:
   directories:
   - ~/.npm
