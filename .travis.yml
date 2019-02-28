@@ -16,7 +16,7 @@ jobs:
     - ng test --no-watch
   - stage: "Deploy to Azure"
     script:
-      - npm run build -- --mode azure
+      - npm run build
     deploy:
       provider: azure_web_apps
       site: zvm-deploymnet-1
