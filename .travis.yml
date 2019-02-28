@@ -3,10 +3,14 @@ notifications:
   email: false
 node_js:
   - 8.9.1
-script: ng test --no-watch
 cache:
   directories:
   - ~/.npm
   - ~/.cache
 install:
   - npm install
+jobs:
+  include:
+  - stage: "UI Tests"
+    script:
+    - ng test --no-watch
