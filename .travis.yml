@@ -14,3 +14,8 @@ jobs:
   - stage: "UI Tests"
     script:
     - ng test --no-watch
+  - stage: "Deploy to Azure"
+    deploy:
+      provider: azure_web_apps
+      site: zvm-deploymnet-1
+      slot: zvm-deploymnet-1
