@@ -20,5 +20,4 @@ jobs:
       - npm run build
     deploy:
       provider: azure_web_apps
-      slot: z-sport-frontend
       verbose: true
