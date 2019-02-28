@@ -10,6 +10,3 @@ cache:
   - ~/.cache
 install:
   - npm install
-before_script:
-  - ls -la
-  - npm install karma --save-dev
