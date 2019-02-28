@@ -7,18 +7,18 @@ cache:
   directories:
   - ~/.npm
   - ~/.cache
-install:
-  - npm install
 jobs:
   include:
-  - stage: "UI Tests"
+  - stage: "install"
     script:
-    - ng test --no-watch
-  - stage: "Deploy to Azure"
+      - npm install
+  - stage: "ui tests"
+    script:
+      - ng test --no-watch
+  - stage: "deploy to azure"
     script:
       - npm run build
     deploy:
       provider: azure_web_apps
-      site: zvm-deployment-1
       slot: z-sport-frontend
       verbose: true
