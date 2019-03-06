@@ -15,7 +15,7 @@ jobs:
   - stage: "ui tests"
     script:
       - ng test --no-watch
-  - stage: "Deploy to GCP"
+  - stage: "deploy to GCP"
     script:
       - npm run build
       - export TARGET_BRANCH=$(echo $TRAVIS_BRANCH | sed -e 's/\//-/g')
