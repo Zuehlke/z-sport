@@ -17,7 +17,7 @@ jobs:
       - ng test --no-watch
   - stage: "deploy to azure"
     script:
-      - npm run build
+    - npm run build -- --mode googlecloud
     deploy:
       provider: gae
       keyfile: client-secret.json
