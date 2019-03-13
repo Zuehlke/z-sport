@@ -12,12 +12,13 @@ jobs:
   - stage: "install"
     script:
       - npm install
-  - stage: "ui tests"
-    script:
-      - ng test --no-watch
+  # TODO: re-enable the ui tests - currently disabled to speed up the build
+  #- stage: "ui tests"
+  #  script:
+  #    - ng test --no-watch
   - stage: "deploy to azure"
     script:
-    - npm run build -- --mode googlecloud
+      - npm install
     deploy:
       provider: gae
       keyfile: client-secret.json
