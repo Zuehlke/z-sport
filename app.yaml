@@ -1,4 +1,3 @@
-# [START runtime]
-runtime: nodejs10
-# [END runtime]
+runtime: nodejs
+vm: true
 
