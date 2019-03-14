@@ -5,7 +5,7 @@ var serveStatic = require('serve-static');
 var app = express();
 app.set('port', (process.env.PORT || 5000));
 
-app.use(serveStatic(path.join(__dirname, '/dist')));
+app.use(serveStatic(path.join(__dirname, '/dist/zSport-ui')));
 
 app.listen(app.get('port'));
 
