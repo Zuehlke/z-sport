@@ -4,7 +4,7 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    proxies: { '/api': { 'target': 'http://localhost:8080/api', 'changeOrigin': true } },
+    proxies: { '/api': { 'target': 'http://34.76.232.111:80/api', 'changeOrigin': true } },
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),

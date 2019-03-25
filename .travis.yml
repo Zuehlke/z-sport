@@ -12,10 +12,9 @@ jobs:
   - stage: "install"
     script:
       - npm install
-  # TODO: re-enable the ui tests - currently disabled to speed up the build
-  #- stage: "ui tests"
-  #  script:
-  #    - ng test --no-watch
+  - stage: "ui tests"
+    script:
+      - ng test --no-watch
   - stage: "deploy to GCP"
     script:
       - npm run build
