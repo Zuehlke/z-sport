@@ -1,1 +1,11 @@
 runtime: nodejs8
+handlers:
+- url: /login
+  http_headers:
+    Access-Control-Allow-Origin: *
+- url: /sports
+  http_headers:
+    Access-Control-Allow-Origin: *
+- url: /calendar
+  http_headers:
+    Access-Control-Allow-Origin: *
