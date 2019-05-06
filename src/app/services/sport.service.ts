@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Access-Control-Allow-Origin': '*'
-  })
-};
+import {HttpClient} from '@angular/common/http';
 
 const sportUrl = 'http://35.195.98.133/api/v1/sports';
 
