@@ -2,4 +2,4 @@ runtime: nodejs8
 handlers:
 - url: /login
   http_headers:
-    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Origin: '*'
