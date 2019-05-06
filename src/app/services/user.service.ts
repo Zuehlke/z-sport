@@ -3,7 +3,7 @@ import {HttpClient, HttpParams} from '@angular/common/http';
 import {User} from '../model/user';
 import {Sport} from '../model/sport';
 
-const userUrl = '/api/v1/users';
+const userUrl = 'http://35.195.98.133/api/v1/users';
 
 @Injectable({
   providedIn: 'root'

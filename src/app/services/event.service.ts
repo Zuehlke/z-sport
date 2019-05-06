@@ -13,8 +13,8 @@ const httpOptions = {
   })
 };
 
-const eventUrl = '/api/v1/events';
-const userUrl = '/api/v1/users';
+const eventUrl = 'http://35.195.98.133/api/v1/events';
+const userUrl = 'http://35.195.98.133/api/v1/users';
 
 @Injectable({
   providedIn: 'root'

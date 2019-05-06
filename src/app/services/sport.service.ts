@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-const sportUrl = '/api/v1/sports';
+const sportUrl = 'http://35.195.98.133/api/v1/sports';
 
 @Injectable({
   providedIn: 'root'
