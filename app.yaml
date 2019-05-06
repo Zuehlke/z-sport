@@ -1,7 +1,1 @@
 runtime: nodejs8
-handlers:
-- url: /(.*)
-  static_dir: \1
-  http_headers:
-    Access-Control-Allow-Origin: '*'
-
