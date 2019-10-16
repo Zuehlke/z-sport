@@ -30,13 +30,13 @@ export class AuthService {
   }
 
   login(userId: number) {
-    this.loggedIn.next(true);
     this.userService.getUserById(userId).subscribe(user => {
       if (user != null) {
         this.user.next(user);
         this.cookieService.set('userId', String(userId));
         this.cookieService.set('isloggedIn', 'true');
         this.router.navigate(['/calendar']);
+        this.loggedIn.next(true);
       } else {
         this.logout();
       }
