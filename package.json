@@ -23,7 +23,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@ng-bootstrap/ng-bootstrap": "^3.3.0",
-    "ajv": "^6.9.1",
+    "ajv": "^6.12.3",
     "angular-calendar": "^0.26.1",
     "angularx-flatpickr": "^6.1.0",
     "bootstrap": "^4.1.3",
