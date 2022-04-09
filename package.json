@@ -31,7 +31,7 @@
     "date-fns": "^1.29.0",
     "flatpickr": "^4.5.2",
     "jquery": "^1.9.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "ngx-cookie-service": "^1.0.10",
     "popper.js": "^1.14.3",
     "rxjs": "~6.2.0",
